@@ -6,6 +6,8 @@
 
 ----->https://textareaexmpl.ccbp.tech/   #(textArea)
 
+----->https://localstrcounter.ccbp.tech/  #(localstorageExample)
+
 ----->https://tabslider.ccbp.tech/
 
 ---->https://bhagavathiqutst.ccbp.tech/
