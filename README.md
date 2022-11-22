@@ -4,6 +4,8 @@
 
 ----->https://bhagavathitodo1.ccbp.tech/
 
+----->https://textareaexmpl.ccbp.tech/   #(textArea)
+
 ----->https://tabslider.ccbp.tech/
 
 ---->https://bhagavathiqutst.ccbp.tech/
