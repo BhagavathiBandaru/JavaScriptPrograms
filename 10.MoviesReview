@@ -1,0 +1,135 @@
+#HTML 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container pt-4" id="movieReviewsContainer">
+        <h1 class="heading-style">Movie Reviews</h1>
+
+        <h1 class="movie-title">MOVIE TITLE</h1>
+
+
+
+        <input type="text" id="titleInput" placeholder="Enter the Movie Name">
+
+        <h1 class="movie-title">YOUR REVIEW</h1>
+
+        <textarea rows="10" cols="50" id="reviewTextarea" placeholder="Enter your review"></textarea>
+
+        <button class="btn btn-primary Button" id="addBtn">Add</button>
+
+
+
+        <div id="reviewsContainer">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+#JAVASCRIPT 
+
+
+let bg_review_Container = document.getElementById("movieReviewsContainer");
+let inputElementTitle = document.getElementById("titleInput");
+let reviewTextAreaElement = document.getElementById("reviewTextarea");
+let review_Text_Container = document.getElementById("reviewsContainer");
+let addBtnn = document.getElementById("addBtn");
+
+
+addBtnn.onclick = function() {
+
+    let movieTitle = inputElementTitle.value;
+    let reViewTitle = reviewTextAreaElement.value;
+    let movieTitleActual = document.createElement("h1");
+    movieTitleActual.textContent = "Movie Title: " + movieTitle;
+    movieTitleActual.classList.add("con-heading-stylers");
+    review_Text_Container.appendChild(movieTitleActual);
+
+
+    let actualReview = document.createElement("p");
+    actualReview.textContent = "Review: " + reViewTitle;
+    actualReview.classList.add("review-text-stylers");
+    review_Text_Container.appendChild(actualReview);
+    bg_review_Container.appendChild(review_Text_Container);
+
+}
+
+
+
+
+
+#CSS
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+.heading-style {
+    font-family: "Roboto";
+    font-size: 35px;
+    color: #2d3a35;
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.movie-title {
+    font-family: "Roboto";
+    font-size: 12px;
+    color: #7b8794;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 6px;
+
+}
+
+.Button {
+    text-align: right;
+
+
+}
+
+.movie-title_text {
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cbd2d9;
+    border-radius: 4px;
+    padding-left: 12px;
+}
+
+.con-heading-stylers {
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: bold;
+    color: #2d3a35;
+}
+
+.review-text-stylers {
+    font-family: "Roboto";
+    font-size: 20px;
+    color: #2d3a35;
+
+}
+
+
+
+
+
+
+
+
+
