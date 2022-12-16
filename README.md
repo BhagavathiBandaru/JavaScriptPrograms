@@ -8,6 +8,8 @@
 
 ----->https://bhagavathitodo1.ccbp.tech/
 
+----->https://bandarusplicing.ccbp.tech/
+
 ----->https://textareaexmpl.ccbp.tech/   #(textArea)
 
 ----->https://localstrcounter.ccbp.tech/  #(localstorageCounterExample)
