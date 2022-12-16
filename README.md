@@ -10,6 +10,8 @@
 
 ----->https://bandarusplicing.ccbp.tech/
 
+----->https://bandarufindinx.ccbp.tech/
+
 ----->https://textareaexmpl.ccbp.tech/   #(textArea)
 
 ----->https://localstrcounter.ccbp.tech/  #(localstorageCounterExample)
