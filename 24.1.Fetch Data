@@ -1,0 +1,243 @@
+let options = {
+  method: "GET"
+};
+
+fetch("https://gorest.co.in/public-api/users", options); 
+                    |
+                    |
+                    |
+                    ^
+1.METHOD @ GET
+
+let options = {
+  method: "GET"
+};
+
+fetch("https://gorest.co.in/public-api/users", options)
+  .then(function(response) {
+    return response.status;
+  })
+  .then(function(status) {
+    console.log(status);  // 200
+  });
+  
+  
+  
+  
+2.let options = {
+    method: "GET"
+};
+
+fetch("https://gorest.co.in/public-api/users", options)
+    .then(function(response) {
+        return response.url;
+    })
+    .then(function(url) {
+        console.log(url);
+    })
+    
+    
+    
+ 3.let options = {
+    method: "GET"
+};
+
+fetch("https://gorest.co.in/public-api/users", options)
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(data) {
+        console.log(data);
+        
+        
+        
+        
+  output:{"code":200,"meta":{"pagination":{"total":5100,"pages":510,"page":1,"limit":10}},
+    "data":[{"id":5352,"name":"Mr. Mangala Chaturvedi","email":"mr_chaturvedi_mangala@hauck.io"......
+]} 
+          
+        
+   
+        
+4.
+let options = {
+    method: "GET"
+};
+
+fetch("https://gorest.co.in/public-api/users", options)
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(data) {
+        let parsedData=JSON.parse(data)
+        console.log(parsedData);
+    })
+
+
+output:-
+Object {code: 200, meta: Object, data: Array[10]}
+
+code: 200
+
+meta: Object
+
+    pagination: Object
+
+data: Array[10]
+
+0: Object
+
+id: 5352
+
+name: "Mr. Mangala Chaturvedi"
+
+email: "mr_chaturvedi_mangala@hauck.io"
+
+gender: "female"
+
+    status: "active"
+
+1: Object
+
+2: Object.........
+
+
+
+5.let options = {
+    method: "GET"
+};
+
+fetch("https://gorest.co.in/public-api/users", options)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(jsonData) {
+        console.log(jsonData);
+    })
+  
+    
+  output:-
+Object {code: 200, meta: Object, data: Array[10]}
+
+code: 200
+
+meta: Object
+
+pagination: Object
+
+total: 5100
+
+pages: 510
+
+page: 1
+
+        limit: 10
+
+data: Array[10]
+
+0: Object
+
+id: 5352
+
+name: "Mr. Mangala Chaturvedi"
+
+email: "mr_chaturvedi_mangala@hauck.io"
+
+gender: "female"
+
+    status: "active"
+
+1: Object
+
+2: Object
+
+3: Object
+
+4: Object
+
+5: Object
+
+6: Object
+
+7: Object
+
+8: Object
+
+        9: Object
+
+
+***********************************POST-METHOD********************** 
+
+    let data = {
+     name: "Micheal",
+     gender: "Male",
+     email: "Micheal@gmail.com",
+     status: "Active"
+ };
+
+ let options = {
+     method: "POST",
+     headers: {
+         "Content-Type": "application/json",
+         Accept: "application/json",
+         Authorization: "Bearer 842b991d717f96f575c37e1de0e48c058d666fcfe48fec7a0397c6f6c77789e5"
+     },
+     body: JSON.stringify(data)
+ };
+
+ fetch("https://gorest.co.in/public-api/users", options)
+     .then(function(response) {
+         return response.json();
+     })
+     .then(function(jsonData) {
+         console.log(jsonData);
+     });
+    
+    
+  ***********************PUT********************* 
+  NOTE:-give id of the user in url
+  
+  let data = {
+  name: "Micheal Jackson"
+};
+
+let options = {
+  method: "PUT",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+    Authorization: "Bearer ACCESS-TOKEN"
+  },
+  body: JSON.stringify(data)
+};
+
+fetch("https://gorest.co.in/public-api/users/1359", options)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(jsonData) {
+    console.log(jsonData);
+  });
+  
+  ***********************DELETE***************
+  let options = {
+  method: "DELETE",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+    Authorization: "Bearer ACCESS-TOKEN"
+  }
+};
+
+fetch("https://gorest.co.in/public-api/users/1359", options)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(jsonData) {
+    console.log(jsonData);
+  });
+  
+  
+  
+  
+  
