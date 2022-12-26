@@ -1,0 +1,136 @@
+
+******JAVASCRIPT****** 
+
+
+
+let hoursInputElement = document.getElementById("hoursInput");
+let minInputElement = document.getElementById("minutesInput");
+let errorMsgPara = document.getElementById("errorMsg");
+let displaySeconds = document.getElementById("timeInSeconds");
+
+let convertButton = document.getElementById("convertBtn");
+
+
+function convertIntoSeconds() {
+    if (hoursInputElement.value === "") {
+        errorMsgPara.textContent = "Please enter a valid Number of hours";
+        displaySeconds.textContent = "";
+
+    } else if (minInputElement.value === "") {
+        errorMsgPara.textContent = "Please enter a valid Number of minutes";
+        displaySeconds.textContent = "";
+
+    } else {
+        displaySeconds.textContent = parseInt(hoursInputElement.value * 3600) + 
+        parseInt(minInputElement.value * 60);
+
+    }
+
+}
+
+
+
+convertButton.addEventListener("click", convertIntoSeconds)
+
+
+
+
+
+
+
+******HTML****** 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg_container text-center ">
+        <h1 class="main_heading">Time Converter</h1>
+        <p class="paragraph">Enter hours and minutes values to convert into seconds</p>
+        <label class="hours_min_heading" for="hoursInput">Hours*</label>
+        <br />
+        <input class="user_input " id="hoursInput">
+        <br />
+        <label class="hours_min_heading" for="minutesInput">Minutes*</label>
+        <br />
+        <input class="user_input " id="minutesInput">
+        <label id="minutesInput"></label>
+        <br />
+        <button class="button" id="convertBtn">Convert to Seconds</button>
+        <p class="errorMsg" id="errorMsg"></p>
+        <p class="displayElement" id="timeInSeconds"></p>
+
+
+
+
+    </div>
+</body>
+
+</html>
+
+*****CSS******* 
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.bg_container {
+    background-image: url("https://assets.ccbp.in/frontend/dynamic-webapps/time-converter-bg.png");
+
+    height: 100vh;
+    background-size: cover;
+}
+
+.main_heading {
+    color: #ffffff;
+    font-size: 45px;
+    font-family: "Roboto";
+
+    font-weight: bold;
+}
+
+.paragraph {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Roboto";
+}
+
+.hours_min_heading {
+    color: #ffffff;
+    font-size: 12px;
+    font-family: "Roboto";
+}
+
+.user_input {
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.button {
+    background-color: #f5f7fa;
+    font-size: 15px;
+    font-family: "Roboto";
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.errorMsg {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Roboto";
+}
+
+.displayElement {
+    background-color: #000000;
+    border-color: #ffffff;
+    border-radius: 8px;
+    color: #ffffff;
+}
